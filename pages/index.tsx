@@ -15,6 +15,10 @@ const HomePage = () => {
                     flex-direction: column;
                     align-items: center;
                 }
+                .one{
+                  font-size: 500px;
+                  color: brown;
+                }
             `}</style>
     </>
   );
