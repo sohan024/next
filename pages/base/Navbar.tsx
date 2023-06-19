@@ -1,24 +1,43 @@
-const Navbar = () => {
-  return (
-    <nav>
-      <div className="logo">
-        <img src="../logo/logo (1) 1.png" alt="Logo" />
-      </div>
-      <div className="home-container">
-        <p className="home">Home</p>
-      </div>
-      <div className="shop-container">
-        <p className="shop">Shop</p>
-      </div>
-      <div className="blog-container">
-        <p className="blog">Blog</p>
-      </div>
-      <div className="signin-button">
-        <button>Sign In</button>
-      </div>
+import { useState } from "react";
+import StoreDialogue from "./StoreDialogue";
 
-      <style jsx>
-        {`
+const Navbar = () => {
+
+    const [isStoreDialogueOpen, setIsStoreDialogueOpen] = useState(false);
+
+    const handleStoreOpen = () => {
+        setIsStoreDialogueOpen(!isStoreDialogueOpen);
+    };
+
+
+    return (
+        <nav>
+            <div className="logo">
+                <img src="../logo/logo (1) 1.png" alt="Logo" />
+            </div>
+            <div className="home-container">
+                <p className="home">Home</p>
+            </div>
+            <div className="shop-container" onClick={handleStoreOpen}>
+                <p className="shop">Shop</p>
+            </div>
+            <div className="blog-container">
+                <p className="blog">Blog</p>
+            </div>
+            <div className="signin-button">
+                <button>Sign In</button>
+            </div>
+
+
+            {isStoreDialogueOpen && (
+                <div className="dialogue-overlay">
+                    <StoreDialogue />
+                </div>
+            )}
+
+
+            <style jsx>
+                {`
           nav {
             display: flex;
             justify-content: space-between;
@@ -73,10 +92,23 @@ const Navbar = () => {
             font-size: 1rem;
             cursor: pointer;
           }
+
+          .dialogue-overlay {
+            position: fixed;
+            top: 100px; /* Adjust the top value to align the dialogue as desired */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10; /* Higher z-index value to appear above other content */
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+          }
+
         `}
-      </style>
-    </nav>
-  );
+            </style>
+        </nav>
+    );
 };
 
 export default Navbar;
