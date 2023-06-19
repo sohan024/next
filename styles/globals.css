@@ -10,6 +10,46 @@ body {
 background: #FFFFFF;
 }
 
+
+:root {
+  /* fonts */
+  --text-btn: Poppins;
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-lg: 18px;
+  --large-font-bold-size: 20px;
+  --text-btn-size: 30px;
+  --h1-size: 64px;
+  --font-24-medium-size: 24px;
+  --h3-size: 22px;
+  --small-font-size: 16px;
+  --font-size-29xl: 48px;
+  --font-size-xs: 12px;
+  --font-size-46xl: 65px;
+  --font-size-61xl: 80px;
+  --font-size-sm: 14px;
+
+  /* Colors */
+  --white: #fff;
+  --primary-color: #eb1c23;
+  --s-font-color: #474747;
+  --color-darkslategray-100: #404040;
+  --color-darkslategray-200: #313131;
+  --color-black: #000;
+  --color-dimgray: #4f4f4f;
+  --font-dark: #2c292a;
+  --color-gray-100: rgba(0, 0, 0, 0.2);
+  --color-gainsboro: #e5dfd9;
+
+  /* Gaps */
+  --gap-base: 16px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;
