@@ -1,20 +1,21 @@
 import { useState } from "react";
 import StoreDialogue from "./StoreDialogue";
 import { useDispatch, useSelector } from "react-redux";
-import { openStoreDialogue, closeStoreDialogue } from "../../store/reducers/storeDialogue/storeDialogueSlice";
+import {
+  openStoreDialogue,
+  closeStoreDialogue,
+} from "../../store/reducers/storeDialogue/storeDialogueSlice";
 import { RootState } from "../../store";
 
 const Navbar = () => {
-
-  const isStoreDialogueOpen = useSelector((state: RootState) => state.storeDialogue);
+  const isStoreDialogueOpen = useSelector(
+    (state: RootState) => state.storeDialogue
+  );
   const dispatch = useDispatch();
 
   const handleStoreOpen = () => {
-    if (!isStoreDialogueOpen)
-      dispatch(openStoreDialogue());
-    else
-      dispatch(closeStoreDialogue());
-
+    if (!isStoreDialogueOpen) dispatch(openStoreDialogue());
+    else dispatch(closeStoreDialogue());
   };
 
   return (
@@ -65,14 +66,22 @@ const Navbar = () => {
               // justify-content: space-between;
               // align-items: center;
               // padding: 1rem;
-              background-color: #000;
-              position: sticky;
+              // background-color: #000;
+              z-index: 1;
+              position: relative;
               top: 0;
               left: 0;
               width: 1920px;
               height: 78px;
               overflow: hidden;
               font-size: 18px;
+              font-family: Poppins;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 9999;
+              background-color: transparent;
             }
 
             .logo {
