@@ -1,9 +1,21 @@
+import { useState } from "react";
 import HomeTop from "./base/HomeTop";
 import GetProducts from "./catalog/product/productList/GetProducts";
+import StoreDialogue from "./base/StoreDialogue";
+import { RootState } from "../store";
+import { useSelector } from "react-redux";
 
 const HomePage = () => {
+  
+  const isStoreDialogueOpen = useSelector((state:RootState) => state.storeDialogue);
+
   return (
     <>
+      {isStoreDialogueOpen && (
+        <div className="dialogue-overlay">
+          <StoreDialogue />
+        </div>
+      )}
       <div className="homepage-container">
         <img className="red-sofa-bg" alt="" src="../logo/red-sofa-bg.png" />
         <div className="home-child"></div>
@@ -159,6 +171,17 @@ const HomePage = () => {
         .one {
           font-size: 500px;
           color: brown;
+        }
+        .dialogue-overlay {
+          position: fixed;
+          top: 100px; /* Adjust the top value to align the dialogue as desired */
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 99999; /* Higher z-index value to appear above other content */
+          background-color: #ffffff;
+          border: 1px solid #ccc;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
         }
       `}</style>
     </>

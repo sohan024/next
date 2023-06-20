@@ -38,7 +38,7 @@ export default function StoreDialogue() {
     const categories = useSelector((state: RootState) => state.category.categoryList);
 
     console.log("aa", categories);
-    
+
 
     useEffect(() => {
         dispatch(fetchCategoryList());
@@ -56,6 +56,14 @@ export default function StoreDialogue() {
 
 
 
+    // const numColumns = 3; // Number of columns to display
+
+    // // Split main categories into arrays based on the number of columns
+    // const mainCategoriesChunks = [];
+    // for (let i = 0; i < categories.length; i += numColumns) {
+    //     mainCategoriesChunks.push(categories.slice(i, i + numColumns));
+    // }
+
     return (
         <div className="container">
             {mainCategoriesChunks.map((chunk, index) => (
@@ -72,6 +80,25 @@ export default function StoreDialogue() {
                     ))}
                 </div>
             ))}
+
+
+            {/* {mainCategoriesChunks.map((chunk, index) => (
+                <div key={index} className="column">
+                    {chunk.map(({ Name, SubCategories }) => (
+                        <div key={Name} className="category">
+                            <h2>{Name}</h2>
+                            <ul>
+                                {SubCategories && SubCategories.map(({ Name: subCategory }: { Name: string }) => (
+                                    <li key={subCategory}>{subCategory}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            ))} */}
+
+
+
 
             <style jsx>{`
           .container {

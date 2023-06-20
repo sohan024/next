@@ -1,11 +1,20 @@
 import { useState } from "react";
 import StoreDialogue from "./StoreDialogue";
+import { useDispatch, useSelector } from "react-redux";
+import { openStoreDialogue, closeStoreDialogue } from "../../store/reducers/storeDialogue/storeDialogueSlice";
+import { RootState } from "../../store";
 
 const Navbar = () => {
-  const [isStoreDialogueOpen, setIsStoreDialogueOpen] = useState(false);
+
+  const isStoreDialogueOpen = useSelector((state: RootState) => state.storeDialogue);
+  const dispatch = useDispatch();
 
   const handleStoreOpen = () => {
-    setIsStoreDialogueOpen(!isStoreDialogueOpen);
+    if (!isStoreDialogueOpen)
+      dispatch(openStoreDialogue());
+    else
+      dispatch(closeStoreDialogue());
+
   };
 
   return (
@@ -48,12 +57,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        {isStoreDialogueOpen && (
-          <div className="dialogue-overlay">
-            <StoreDialogue />
-          </div>
-        )}
 
         <style jsx>
           {`
@@ -188,7 +191,7 @@ const Navbar = () => {
               top: 100px; /* Adjust the top value to align the dialogue as desired */
               left: 50%;
               transform: translateX(-50%);
-              z-index: 10; /* Higher z-index value to appear above other content */
+              z-index: 99999; /* Higher z-index value to appear above other content */
               background-color: #ffffff;
               border: 1px solid #ccc;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
