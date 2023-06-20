@@ -19,6 +19,17 @@ const HomePage = () => {
           <div className="div1">1</div>
           <img className="arrow-up-2-icon" alt="" src="../logo/arrowup-2.svg" />
         </div>
+        <div className="circle-phone-flip-1-parent">
+          <img
+            className="circle-phone-flip-1-icon"
+            alt=""
+            src="../logo/circlephoneflip-1.svg"
+          />
+          <div className="call-parent">
+            <div className="call-us">Call us</div>
+            <div className="div-number">09 678 777 777</div>
+          </div>
+        </div>
       </div>
 
       <style jsx>{`
@@ -35,6 +46,41 @@ const HomePage = () => {
           font-size: var(--text-btn-size);
           color: var(--white);
           font-family: var(--text-btn);
+        }
+        .circle-phone-flip-1-parent {
+          position: absolute;
+          top: 877px;
+          left: 1742px;
+          width: 155px;
+          height: 42px;
+          font-size: var(--font-size-sm);
+          font-family: var(--font-inter);
+        }
+        .circle-phone-flip-1-icon {
+          position: absolute;
+          top: 0;
+          left: 113px;
+          width: 42px;
+          height: 42px;
+          overflow: hidden;
+        }
+        .call-us,
+        .div1-number {
+          position: absolute;
+          top: 22px;
+          left: 0;
+          font-weight: 300;
+        }
+        .call-us {
+          top: 0;
+          left: 59px;
+        }
+        .call-parent {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 103px;
+          height: 39px;
         }
         .arrow-up-1-parent {
           position: absolute;

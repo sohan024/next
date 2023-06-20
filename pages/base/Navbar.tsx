@@ -69,7 +69,7 @@ const Navbar = () => {
               width: 1920px;
               height: 78px;
               overflow: hidden;
-              font-size: var(--font-size-lg);
+              font-size: 18px;
             }
 
             .logo {
