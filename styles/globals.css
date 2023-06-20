@@ -1,16 +1,3 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    
-
-
-background: #FFFFFF;
-}
-
-
 :root {
   /* fonts */
   --text-btn: Poppins;
@@ -48,6 +35,28 @@ background: #FFFFFF;
   /* border radiuses */
   --br-3xs: 10px;
 }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    
+
+
+background: #FFFFFF;
+}
+
+
+/* @font-face {
+  font-family: 'Poppins';
+  src: url('/public/fonts/Poppins/') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/path/to/Inter.ttf') format('truetype');
+} */
 
 
 a {

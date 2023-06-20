@@ -101,44 +101,48 @@ const Navbar = () => {
               width: 89px;
               height: 34px;
             }
+            .help-container {
+              position: absolute;
+              top: 28px;
+              left: 1181px;
+              width: 89px;
+              height: 34px;
+            }
+            .showrooms-container {
+              position: absolute;
+
+              width: 136px;
+              height: 34px;
+              top: 28px;
+              left: 1013px;
+            }
+            .blog-container {
+              position: absolute;
+              top: 28px;
+              left: 892px;
+              width: 89px;
+              height: 34px;
+            }
             .help {
               position: absolute;
-              width: 41px;
-              height: 27px;
-              left: 1205px;
-              top: 31px;
-
-              font-family: "Poppins";
-              font-style: normal;
+              top: 3px;
+              left: 24px;
               font-weight: 500;
-              font-size: 18px;
-              line-height: 27px;
+              color: white;
             }
             .showrooms {
               position: absolute;
-              width: 108px;
-              height: 27px;
-              left: 1027px;
-              top: 31px;
-
-              font-family: "Poppins";
-              font-style: normal;
+              top: 3px;
+              left: 14px;
               font-weight: 500;
-              font-size: 18px;
-              line-height: 27px;
+              color: white;
             }
             .blog {
               position: absolute;
-              width: 55px;
-              height: 30px;
-              left: 909px;
-              top: 30px;
-
-              font-family: "Poppins";
-              font-style: normal;
+              top: 2px;
+              left: 17px;
               font-weight: 500;
-              font-size: 18px;
-              line-height: 30px;
+              color: white;
             }
             .shop {
               position: absolute;

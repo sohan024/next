@@ -5,8 +5,6 @@ const HomePage = () => {
   return (
     <>
       <div className="homepage-container">
-        {/* <HomeTop />
-        <GetProducts /> */}
         <img className="red-sofa-bg" alt="" src="../logo/red-sofa-bg.png" />
         <div className="home-child"></div>
         <div className="furnishing-crafts-parent">
@@ -15,6 +13,11 @@ const HomePage = () => {
           <img className="group-child" alt="" src="../logo/vector-2.svg" />
 
           <img className="group-item" alt="" src="../logo/vector-2.svg" />
+        </div>
+        <div className="arrow-up-1-parent">
+          <img className="arrow-up-1-icon" alt="" src="../logo/arrowup-1.svg" />
+          <div className="div1">1</div>
+          <img className="arrow-up-2-icon" alt="" src="../logo/arrowup-2.svg" />
         </div>
       </div>
 
@@ -32,6 +35,32 @@ const HomePage = () => {
           font-size: var(--text-btn-size);
           color: var(--white);
           font-family: var(--text-btn);
+        }
+        .arrow-up-1-parent {
+          position: absolute;
+          top: 453px;
+          left: 1849px;
+          width: 48px;
+          height: 264px;
+          font-size: var(--font-size-29xl);
+        }
+        .div1 {
+          position: absolute;
+          top: 96px;
+          left: 19px;
+          font-weight: 100;
+        }
+        .arrow-up-1-icon,
+        .arrow-up-2-icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 48px;
+          height: 48px;
+          overflow: hidden;
+        }
+        .arrow-up-2-icon {
+          top: 216px;
         }
         .furnishing-crafts-parent {
           position: absolute;
