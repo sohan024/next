@@ -1,7 +1,7 @@
 import { GET } from "../service";
 
 export const getProductListService = () => {
-    return GET(`/api/products/getproducts`);
+    return GET(`/api/product/getproducts`);
 };
 
 export const getProductService = (id: any) => {

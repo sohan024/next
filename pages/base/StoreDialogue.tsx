@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../store';
+import { fetchCategoryList } from '../../store/reducers/catalog/categorySlice';
 
 const mockData = [
     {
@@ -28,6 +31,20 @@ const mockData = [
 ];
 
 export default function StoreDialogue() {
+
+
+    const dispatch: AppDispatch = useDispatch();
+
+    const categories = useSelector((state: RootState) => state.category.categoryList);
+
+    console.log("aa", categories);
+    
+
+    useEffect(() => {
+        dispatch(fetchCategoryList());
+    }, [dispatch]);
+
+
 
     const numColumns = 3; // Number of columns to display
 
